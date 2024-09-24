@@ -7,15 +7,15 @@ class Logo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
+    return Center(
       child: Column(
         children: [
-          Icon(
-            Icons.coffee,
-            size: 60,
+          Image.asset(
+            'assets/cooked-coffee.png',
+            height: 100,
           ),
-          Text(
-            "HOY, KAPE TAYO!",
+          const Text(
+            "SPILT COFFEE",
             style: TextStyle(
               fontWeight: FontWeight.w600,
               fontSize: 22

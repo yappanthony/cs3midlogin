@@ -39,7 +39,10 @@ class LoginCard extends StatelessWidget {
               labelStyle: TextStyle(
                 fontSize: 14
               ),
-              suffixIcon: Icon(Icons.email),
+              suffixIcon: Icon(
+                Icons.email,
+                color: Color.fromARGB(255, 3, 121, 142),
+              ),
             ),
           ),
           const SizedBox(
@@ -51,7 +54,11 @@ class LoginCard extends StatelessWidget {
               labelStyle: TextStyle(
                 fontSize: 14
               ),
-              suffixIcon: Icon(Icons.remove_red_eye),
+              suffixIcon: Icon(
+                Icons.remove_red_eye,
+                color: Color.fromARGB(255, 3, 121, 142),
+
+              ),
             ),
             obscureText: true,
           ),
