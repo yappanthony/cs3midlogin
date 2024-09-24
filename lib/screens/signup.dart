@@ -22,7 +22,7 @@ class SignUp extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Logo(),
+                Logo(isWhite: false,),
         
                 SignUpCard(),
         

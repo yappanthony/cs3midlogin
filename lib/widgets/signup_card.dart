@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import './socials.dart';
 
-class LoginCard extends StatelessWidget {
-  const LoginCard({
-    super.key,
-  });
+class SignUpCard extends StatelessWidget {
+  const SignUpCard({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,21 +15,31 @@ class LoginCard extends StatelessWidget {
       child: Column(
         children: [
           const Text(
-            'Hello mamsir',
-            style: TextStyle(
-              fontWeight: FontWeight.w500,
-              fontSize: 20
-            )
-          ),
-          const Text(
-            "Sign into your account",
+            "Create Account",
             style: TextStyle(
               color: Colors.grey,
-              fontWeight: FontWeight.w500
+              fontWeight: FontWeight.w600,
+              fontSize: 16
             )
           ),
           const SizedBox(
             height: 20,
+          ),
+          const TextField(
+            decoration: InputDecoration(
+              labelText: "User Name*",
+              labelStyle: TextStyle(
+                fontSize: 14
+              ),
+              suffixIcon: Icon(
+                FontAwesomeIcons.solidUser,
+                // color: Color.fromARGB(255, 3, 121, 142),
+                color: Color.fromARGB(255, 186, 160, 125),
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 10,
           ),
           const TextField(
             decoration: InputDecoration(
@@ -41,12 +50,12 @@ class LoginCard extends StatelessWidget {
               suffixIcon: Icon(
                 Icons.email,
                 // color: Color.fromARGB(255, 3, 121, 142),
-                color: Color.fromARGB(255, 113, 66, 46),
+                color: Color.fromARGB(255, 186, 160, 125),
               ),
             ),
           ),
           const SizedBox(
-            height: 20,
+            height: 10,
           ),
           const TextField(
             decoration: InputDecoration(
@@ -57,23 +66,13 @@ class LoginCard extends StatelessWidget {
               suffixIcon: Icon(
                 Icons.remove_red_eye,
                 // color: Color.fromARGB(255, 3, 121, 142),
-                color: Color.fromARGB(255, 113, 66, 46),
+                color: Color.fromARGB(255, 186, 160, 125),
 
               ),
             ),
             obscureText: true,
           ),
     
-          const Align(
-            alignment: Alignment.centerRight,
-            child: Text(
-              textAlign: TextAlign.end,
-              "Forgot your password?",
-              style: TextStyle(
-                color: Colors.grey,
-              ),
-            ),
-          ),
     
           const SizedBox(
             height: 50,
@@ -98,19 +97,19 @@ class LoginCard extends StatelessWidget {
               style: ElevatedButton.styleFrom(
                 elevation: 3,
                 
-                // backgroundColor: const Color.fromARGB(255,10,175,158),
-                backgroundColor: const Color.fromARGB(255, 186, 160, 125),
+                // backgroundColor: const Color.fromARGB(255, 25, 119, 155),
+                backgroundColor: const Color.fromARGB(255, 113, 66, 46),
                 foregroundColor: Colors.white, // This controls the text color
             
               ),
-              child: const Text("Login"),
+              child: const Text("Register Now"),
             ),
           ),
     
           const SizedBox(height: 30,),
     
           const Text(
-            "Or Login using social media",
+            "Or Register using social media",
             style: TextStyle(
               fontWeight: FontWeight.w500,
               color: Color.fromARGB(255, 139, 139, 139),
@@ -120,6 +119,7 @@ class LoginCard extends StatelessWidget {
           const SizedBox(height: 30,),
     
           const Socials(),
+
     
           const SizedBox(height: 10,),
     
@@ -128,4 +128,3 @@ class LoginCard extends StatelessWidget {
     );
   }
 }
-

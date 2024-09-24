@@ -21,7 +21,7 @@ class Login extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Logo(),
+                Logo(isWhite: false,),
         
                 LoginCard(),
         

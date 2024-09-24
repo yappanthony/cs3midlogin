@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
 class Logo extends StatelessWidget {
+  final bool isWhite;
   const Logo({
     super.key,
+    required this.isWhite,
   });
 
   @override
@@ -14,9 +16,10 @@ class Logo extends StatelessWidget {
             'assets/cooked-coffee.png',
             height: 100,
           ),
-          const Text(
+          Text(
             "SPILT COFFEE",
             style: TextStyle(
+              color: isWhite ? Colors.white : Colors.black,
               fontWeight: FontWeight.w600,
               fontSize: 22
             )
