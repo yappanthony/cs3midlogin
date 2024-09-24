@@ -41,7 +41,8 @@ class LoginCard extends StatelessWidget {
               ),
               suffixIcon: Icon(
                 Icons.email,
-                color: Color.fromARGB(255, 3, 121, 142),
+                // color: Color.fromARGB(255, 3, 121, 142),
+                color: Color.fromARGB(255, 113, 66, 46),
               ),
             ),
           ),
@@ -56,7 +57,8 @@ class LoginCard extends StatelessWidget {
               ),
               suffixIcon: Icon(
                 Icons.remove_red_eye,
-                color: Color.fromARGB(255, 3, 121, 142),
+                // color: Color.fromARGB(255, 3, 121, 142),
+                color: Color.fromARGB(255, 113, 66, 46),
 
               ),
             ),
@@ -97,7 +99,8 @@ class LoginCard extends StatelessWidget {
               style: ElevatedButton.styleFrom(
                 elevation: 3,
                 
-                backgroundColor: const Color.fromARGB(255,10,175,158),
+                // backgroundColor: const Color.fromARGB(255,10,175,158),
+                backgroundColor: const Color.fromARGB(255, 186, 160, 125),
                 foregroundColor: Colors.white, // This controls the text color
             
               ),

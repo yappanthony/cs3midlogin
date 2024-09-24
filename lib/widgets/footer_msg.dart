@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 
 class FooterMsg extends StatelessWidget {
+  final String msg;
+  final String question;
+  final String routeName;
+
   const FooterMsg({
     super.key,
+    required this.msg,
+    required this.question,
+    required this.routeName,
   });
 
   @override
@@ -12,15 +19,15 @@ class FooterMsg extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.end,
       
       children: [
-        const Text(
-          "Don't have an account? ",
-          style: TextStyle(
+        Text(
+          "$question ",
+          style: const TextStyle(
             fontWeight: FontWeight.w500
           )
         ),
         TextButton(
           onPressed: () {
-            Navigator.pushNamed(context, '/signup');
+            Navigator.pushNamed(context, routeName);
           },
           
           style: TextButton.styleFrom(
@@ -29,9 +36,9 @@ class FooterMsg extends StatelessWidget {
             tapTargetSize: MaterialTapTargetSize.shrinkWrap,
           ),
 
-          child: const Text(
-            "Register Now",
-            style: TextStyle(
+          child: Text(
+            msg,
+            style: const TextStyle(
               color: Color.fromARGB(255, 10, 148, 134),
               fontWeight: FontWeight.w600,
               decoration: TextDecoration.underline,

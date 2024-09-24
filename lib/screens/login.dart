@@ -25,7 +25,11 @@ class Login extends StatelessWidget {
         
                 LoginCard(),
         
-                FooterMsg(),
+                FooterMsg(
+                  msg: "Register Now", 
+                  question: "Don't have an account?",
+                  routeName: "/signup"
+                ),
               ],
             ),
           ],
