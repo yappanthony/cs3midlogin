@@ -10,20 +10,27 @@ class Login extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Stack(
-      children: [
-        
-        Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+    return Scaffold(
+      body: Container(
+        decoration: const BoxDecoration(
+          color: Color.fromARGB(255, 238, 238, 238)
+        ),
+        child: const Stack(
           children: [
-            Logo(),
-    
-            LoginCard(),
-    
-            FooterMsg(),
+            
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Logo(),
+        
+                LoginCard(),
+        
+                FooterMsg(),
+              ],
+            ),
           ],
         ),
-      ],
+      ),
     );
   }
 }
