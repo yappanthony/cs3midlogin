@@ -7,26 +7,38 @@ class FooterMsg extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.end,
       
       children: [
-        Text(
+        const Text(
           "Don't have an account? ",
           style: TextStyle(
             fontWeight: FontWeight.w500
           )
         ),
-        Text(
-          "Register Now",
-          style: TextStyle(
-            color: Color.fromARGB(255, 10, 148, 134),
-            fontWeight: FontWeight.w600,
-            decoration: TextDecoration.underline,
-            decorationColor: Color.fromARGB(255, 10, 148, 134),
-            decorationThickness: 2
-          )
+        TextButton(
+          onPressed: () {
+            Navigator.pushNamed(context, '/signup');
+          },
+          
+          style: TextButton.styleFrom(
+            padding: EdgeInsets.zero,
+            minimumSize: Size.zero,
+            tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+          ),
+
+          child: const Text(
+            "Register Now",
+            style: TextStyle(
+              color: Color.fromARGB(255, 10, 148, 134),
+              fontWeight: FontWeight.w600,
+              decoration: TextDecoration.underline,
+              decorationColor: Color.fromARGB(255, 10, 148, 134),
+              decorationThickness: 2,
+            ),
+          ),
         )
       ],
     );

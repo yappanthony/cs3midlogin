@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import './screens/login.dart';
+import './screens/signup.dart';
+import './screens/home.dart';
 
 
 void main() {
@@ -13,14 +15,12 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: Container(
-          decoration: const BoxDecoration(
-            color: Color.fromARGB(255, 238, 238, 238)
-          ),
-          child: const Login(),
-        )
-      ),
+      home: const Login(),
+      routes: {
+        '/login': (context) => const Login(),
+        '/signup': (context) => const SignUp(),
+        '/home': (context) => const Home(),
+      },
     );
   }
 }
