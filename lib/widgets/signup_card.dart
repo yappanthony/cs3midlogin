@@ -22,12 +22,14 @@ class SignUpCard extends StatelessWidget {
               fontSize: 16
             )
           ),
+
           const SizedBox(
-            height: 20,
+            height: 10,
           ),
+
           const TextField(
             decoration: InputDecoration(
-              labelText: "User Name*",
+              labelText: "Firstname*",
               labelStyle: TextStyle(
                 fontSize: 14
               ),
@@ -38,25 +40,65 @@ class SignUpCard extends StatelessWidget {
               ),
             ),
           ),
+
           const SizedBox(
             height: 10,
           ),
+
           const TextField(
             decoration: InputDecoration(
-              labelText: "Email ID*",
+              labelText: "Lastname*",
               labelStyle: TextStyle(
                 fontSize: 14
               ),
               suffixIcon: Icon(
-                Icons.email,
+                FontAwesomeIcons.solidUser,
                 // color: Color.fromARGB(255, 3, 121, 142),
                 color: Color.fromARGB(255, 186, 160, 125),
               ),
             ),
           ),
+
           const SizedBox(
             height: 10,
           ),
+
+          const TextField(
+            decoration: InputDecoration(
+              labelText: "Email Address*",
+              labelStyle: TextStyle(
+                fontSize: 14
+              ),
+              suffixIcon: Icon(
+                FontAwesomeIcons.solidUser,
+                // color: Color.fromARGB(255, 3, 121, 142),
+                color: Color.fromARGB(255, 186, 160, 125),
+              ),
+            ),
+          ),
+
+          const SizedBox(
+            height: 10,
+          ),
+
+          const TextField(
+            decoration: InputDecoration(
+              labelText: "Username*",
+              labelStyle: TextStyle(
+                fontSize: 14
+              ),
+              suffixIcon: Icon(
+                FontAwesomeIcons.solidUser,
+                // color: Color.fromARGB(255, 3, 121, 142),
+                color: Color.fromARGB(255, 186, 160, 125),
+              ),
+            ),
+          ),
+
+          const SizedBox(
+            height: 10,
+          ),
+
           const TextField(
             decoration: InputDecoration(
               labelText: "Password*",
@@ -72,14 +114,30 @@ class SignUpCard extends StatelessWidget {
             ),
             obscureText: true,
           ),
-    
-    
+
           const SizedBox(
-            height: 50,
+            height: 10,
+          ),
+
+          const TextField(
+            decoration: InputDecoration(
+              labelText: "Confirm Password*",
+              labelStyle: TextStyle(
+                fontSize: 14
+              ),
+              suffixIcon: Icon(
+                Icons.remove_red_eye,
+                // color: Color.fromARGB(255, 3, 121, 142),
+                color: Color.fromARGB(255, 186, 160, 125),
+
+              ),
+            ),
+            obscureText: true,
           ),
     
           Container(
             width: 250,
+            padding: const EdgeInsets.only(top: 30, bottom: 30),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(100),
               boxShadow: const [
@@ -106,7 +164,6 @@ class SignUpCard extends StatelessWidget {
             ),
           ),
     
-          const SizedBox(height: 30,),
     
           const Text(
             "Or Register using social media",
@@ -116,12 +173,10 @@ class SignUpCard extends StatelessWidget {
             ),
           ),
     
-          const SizedBox(height: 30,),
-    
-          const Socials(),
-
-    
-          const SizedBox(height: 10,),
+          const Padding(
+            padding: EdgeInsets.only(top: 20),
+            child: Socials(),
+          ),
     
         ],
       ),

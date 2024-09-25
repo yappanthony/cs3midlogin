@@ -22,6 +22,8 @@ class SignUp extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                SizedBox(height: 30),
+
                 Logo(isWhite: false,),
         
                 SignUpCard(),
