@@ -21,16 +21,26 @@ class Login extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Logo(isWhite: false,),
-        
-                LoginCard(),
-        
-                FooterMsg(
+                Column(
+                  children: [
+                    Logo(isWhite: false,),
+                              
+                    LoginCard(),
+                  ],
+                ),
+              ],
+            ),
+
+            Padding(
+              padding: EdgeInsets.only(bottom: 15),
+              child: Align(
+                alignment: Alignment.bottomCenter,
+                child: FooterMsg(
                   msg: "Register Now", 
                   question: "Don't have an account?",
                   routeName: "/signup"
                 ),
-              ],
+              ),
             ),
           ],
         ),
