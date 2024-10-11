@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import './screens/login.dart';
 import './screens/signup.dart';
 import './screens/home.dart';
+import './screens/cats.dart';
 
 
 void main() {
@@ -15,7 +16,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const Home(),
+      home: const Cats(),
       routes: {
         '/login': (context) => const Login(),
         '/signup': (context) => const SignUp(),
