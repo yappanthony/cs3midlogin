@@ -10,16 +10,20 @@ class CatCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isImgHere = cat['url'] != null;
     return Card(
       color: const Color.fromARGB(255, 224, 218, 209),
       child: Column(
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(8),
-            child: Image.network(
+            child: isImgHere 
+            ? 
+            Image.network(
               cat['url'],
-              
-            ),
+            )
+            :
+            Image.asset('assets/waiting.jpg'),
           ),
           Padding(
             padding: const EdgeInsets.all(15),

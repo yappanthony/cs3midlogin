@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../widgets/cat_card.dart';
 import '../services/apicats.dart';
+// import '../widgets/bottom_navigation.dart';
 
 class Cats extends StatefulWidget {
   const Cats({super.key});
@@ -83,6 +84,12 @@ class _CatsState extends State<Cats> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+            icon: const Icon(Icons.arrow_back),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+        ),
         centerTitle: true,
         title: const Text("Meet the cats"),
       ),
@@ -102,9 +109,10 @@ class _CatsState extends State<Cats> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               
-              for (var cat in cats) CatCard(cat: cat)
+              for (var cat in cats) CatCard(cat: cat),
             ]
           ),
+
         ),
       ),
     );

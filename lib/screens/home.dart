@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../widgets/logo.dart';
+// import '../widgets/bottom_navigation.dart';
+
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -64,6 +66,22 @@ class Home extends StatelessWidget {
               ],
             ),
 
+            const SizedBox(height: 20,),
+
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/cats');
+              }, 
+              style: ElevatedButton.styleFrom(
+                elevation: 3,
+                
+                backgroundColor: Colors.white,
+                foregroundColor: const Color.fromARGB(255, 113, 66, 46), // This controls the text color
+              
+                ),
+              child: const Text("Meet the cats"),
+            ),
+
             const Padding(
               padding: EdgeInsets.only(top: 30, bottom: 30),
               child: Text(
@@ -89,11 +107,11 @@ class Home extends StatelessWidget {
                 decoration: TextDecoration.underline,
                 decorationColor: Colors.white,
               ),
-            )
+            ),
 
           ],
         )
-      )
+      ),
     );
   }
 }
